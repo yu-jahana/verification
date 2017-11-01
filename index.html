@@ -1,0 +1,1887 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="auが提供するポータルサイト。国内外の主要ニュースを始め、インターネット検索、天気、乗換、占いなど日常生活に欠かせない情報をリアルタイムでお届けしています。">
+    <meta name="keywords" content="au,KDDI,au Webポータル,au ウェブポータル,ポータル,ニュース,ヘッドライン,速報,芸能,エンタメ,検索,Twitter,天気,運行情報,乗換,スマートパス,au WALLET,auでんき,auのほけん,ショッピング,漫画,占い,ガチャ,スマートフォン">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="au Webﾎﾟｰﾀﾙ">
+    <meta property="og:title" content="au Webポータル">
+    <meta property="og:site_name" content="au Webポータル｜最新のニュースをお届け！">
+    <meta property="og:image" content="https://simg.auone.jp/emu/dist/img/portal_ogp.png?cc=1508835726">
+    <meta property="og:description" content="auが提供するポータルサイト。国内外の主要ニュースを始め、検索、天気、乗換、占いなど日常生活に欠かせない情報をリアルタイムでお届けしています。">
+    <meta property="og:url" content="https://auone.jp/">
+    <meta property="og:type" content="website">
+    <title>au Webポータル</title>
+    <link rel="shortcut icon" href="https://simg.auone.jp/emu/dist/img/favicon.png?cc=1508835726">
+    <link rel="apple-touch-icon-precomposed" href="https://simg.auone.jp/emu/dist/img/favicon.png?cc=1508835726">
+    <link rel="canonical" href="https://auone.jp/">
+    <link rel="stylesheet" href="//simg.auone.jp/emu/dist/css/top_pc.css?cc=1508835726">
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="//simg.auone.jp/emu/dist/css/ex_ie9.css?cc=1508835726">
+    <![endif]-->
+    <script src="//simg.auone.jp/emu/dist/js/style_pc.js?cc=1508835726"></script>
+</head>
+<body class="base__bg">
+    <noscript>JavaScriptをオンにしてお楽しみください。</noscript>
+
+    
+    <div class="wrapper__contents">
+
+        
+        <div class="main">
+
+            
+            <article class="container">
+
+                
+                <header class="header">
+                    
+                    <div class="header__cover">
+                        
+                        <div class="header__logo">
+                            <h1><a href="/" class="js-analytics" data-ga-action="Header" data-ga-label="ロゴ">au</a></h1>
+                        </div>
+
+                        
+                        <section class="js-search search search__logo" id="search_t">
+                            
+                            <div class="search__bx">
+                                <form action="" name="search" method="get">
+                                    <div class="search_inner">
+
+                                        <div class="search__category">
+                                            <ul class="search__items">
+                                                <li class="search__item js-search__item js-analytics" data-service="portal_web" data-ga-action="Function" data-ga-label="カテゴリ選択（ウェブ）"><a onclick="return false;">ウェブ</a></li>
+                                                <li class="search__item js-search__item js-analytics" data-service="portal_map" data-ga-action="Function" data-ga-label="カテゴリ選択（地図）"><a onclick="return false;">地図</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="search__box">
+                                            <input type="search" name="keyword" placeholder="検索ワードを入力" class="js-keyword js-set-keyword js-keyword-t">
+                                            <i class="sprite-search sprite-search-icon03 js-sprite-search-icon03"></i>
+                                            <a class="js-search__clear search__clear js-analytics" data-ga-action="Function" data-ga-label="検索ボックス内の×">
+                                                <i class="sprite-search sprite-search-crear"></i>
+                                            </a>
+                                            <span class="logo"><i class="sprite-search sprite-search-logo"></i></span>
+                                        </div>
+                                        <input type="text" name="service" class="js-search__service js-search__service-t" style="display:none;">
+                                        <div class="search__submit">
+                                            <a class="js-search__submit search__submit" onclick="return false;">検索</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            
+
+                            
+                            <div class="js-suggest suggest">
+                                <script type="text/template" class="js-template">
+                                    <% var id = model.get('id'); %>
+                                    <% var suggestOriginal = model.get('w'); %>
+                                    <ul class="suggest__items js-suggest__items" data-suggest-original="<%- suggestOriginal %>">
+                                        <% _.each(model.get('items'), function (value, index) { %>
+                                        <li class="suggest__item js-suggest__item">
+                                            <a class="js-suggest-search-do" href="#" data-suggest-word="<%- value %>" data-suggest-num="<%= index + 1 %>" data-suggest-type="<%- id %>"><%- value %></a>
+                                            <a class="js-suggest-set" data-suggest-word="<%- value %>">
+                                                <i class="sprite-search sprite-search-icon02"></i>
+                                            </a>
+                                        </li>
+                                        <% }); %>
+                                    </ul>
+                                </script>
+                            </div>
+                            
+
+                        </section>
+                        
+                    </div>
+                    
+                </header>
+                
+
+                
+                <section class="js-disaster">
+                    <script type="text/template" class="js-template">
+                        <div class="disaster">
+                            <a href="<%= model.get('link') %>" class="arrow-red js-analytics" data-ga-action="Extra" data-ga-label="災害用伝言板">
+                                <h2 class="disaster__title"><%= model.get('sub_category_title') %></h2>
+                            </a>
+                        </div>
+                    </script>
+                </section>
+                
+
+                
+                                
+                
+                                
+
+                
+                <section class="js-news news">
+                                    
+                                            <div class="js-news__tab-wrapper news__tab-wrapper">
+                            <div class="js-news__tab news__tab">
+                                <div class="js-news__tab-inner news__tab-inner">
+                                    <ul class="js-news__tab-items news__tab-items">
+                                                                                                                          <li class="js-news__tab-item news__tab-item news__tab-item--active" data-tab="1" data-ga-action="Function" data-ga-label="主要タブ">主要</li>
+                                                                                                                                                                                                                  <li class="js-news__tab-item news__tab-item" data-tab="3" data-ga-action="Function" data-ga-label="時事タブ">時事</li>
+                                                                                                                          <li class="js-news__tab-item news__tab-item" data-tab="4" data-ga-action="Function" data-ga-label="芸能タブ">芸能</li>
+                                                                                                                          <li class="js-news__tab-item news__tab-item" data-tab="5" data-ga-action="Function" data-ga-label="スポーツタブ">スポーツ</li>
+                                                                                                                          <li class="js-news__tab-item news__tab-item" data-tab="6" data-ga-action="Function" data-ga-label="コネタタブ">コネタ</li>
+                                                                          </ul>
+                                    <div class="js-news__tab--active-marker news__tab--active-marker" style="width: 127px; left: 10px; opacity: 1;"></div>
+                                </div>
+                            </div>
+                        </div>
+                                        
+
+                    
+                                                                    <div class="js-news__genre news__genre" style="display:block;">
+                                                            
+                                <section class="js-lifetools lifetools">
+    <div class="lifetools__items">
+
+        
+        <div class="js-weather weather">
+            
+            <a href="/setting/services/" class="js-analytics" data-ga-action="Daily" data-ga-label="天気フィラー">
+                <i class="lifetools__sprite lifetools__sprite--icon01"></i>
+                <span>天気<i class="lifetools__sprite lifetools__sprite--icon04"></i></span>
+            </a>
+            
+            <script type="text/template" class="js-template">
+                <a href="http://weather.auone.jp/area/pref?prefecture_code=<%= model.get('pref_code') %>&subdiv1_code=<%= model.get('area_code') %>" class="js-weather__link weather__link js-analytics" data-ga-action="Daily" data-ga-label="天気">
+                    <p class="lifetools__personal--icon"><% if (isValid === true) { %><img width="30" height="20" class="js-weather__img" src="<%= model.get('weather_today') %>"><% } %></p>
+                    <div class="lifetools__personal">
+                        <p class="js-weather__area weather__area"><%= model.get('area_name') %></p>
+                        <dl class="weather__data">
+                            <dt class="weather__label">最高気温</dt>
+                            <dd class="js-weather__maxtemp weather__maxtemp"><%= model.get('high_temper_today') %>℃</dd>
+                            <dt class="weather__label">降水確率</dt>
+                            <dd class="js-weather__precipitation weather__precipitation"><%= model.get('rain_probab_today') %>%</dd>
+                        </dl>
+                    </div>
+                </a>
+            </script>
+
+        </div>
+        
+
+
+        
+        <div class="js-fortune fortune">
+            <script type="text/template" class="js-template">
+                <a href="<%= model.get('link') %>" class="js-fortune__link fortune__link js-analytics" data-ga-action="Daily" data-ga-label="占い">
+                    <p class="lifetools__personal--icon"><i class="js-fortune__sprite fortune__sprite fortune__sprite--icon<%= model.get('astro_code') %>"></i></p>
+                    <div class="lifetools__personal">
+                        <p class="js-fortune__rank fortune__rank"><%= model.get('rank') %>位</p>
+                        <p class="js-fortune__label fortune__label"><%= model.get('astro_name') %></p>
+                    </div>
+                </a>
+            </script>
+            
+            <a href="/setting/services/" class="fortune__link js-analytics" data-ga-action="Daily" data-ga-label="占いフィラー">
+                <i class="lifetools__sprite lifetools__sprite--icon02"></i>
+                <span>占い<i class="lifetools__sprite lifetools__sprite--icon04"></i></span>
+            </a>
+            
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+<section class="news__items--first">
+    
+    <ul class="news__items">
+                                    <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/4/8/109_8_r_20171101_1509496771889443/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_主要】" data-ga-action="NYテロ 容疑者はウズベク出身" data-ga-label="1本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/72924deabd3b7e4e177f1c26713e087a_1509497421_m.jpg),url(//portal.st-img.jp/filler/4_8_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                NYテロ 容疑者はウズベク出身
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 09:32</span>
+                                <span class="news__service-name">CNN.co.jp</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/2/3/16_3_r_20171101_1509497252246030/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_主要】" data-ga-action="内閣総辞職 夜に新内閣発足へ" data-ga-label="2本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/88e329b0bcd3a83f1fc8af5ad9802cef_1509497252_m.jpg),url(//portal.st-img.jp/filler/2_3_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                内閣総辞職 夜に新内閣発足へ
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 09:41</span>
+                                <span class="news__service-name">朝日新聞社</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/2/2/101_2_r_20171031_1509455111671599/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_主要】" data-ga-action="座間9遺体 別の女性証言で発覚" data-ga-label="3本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/abc2226f5c962f1038f3b9404ff58ea4_1509500751_m.jpg),url(//portal.st-img.jp/filler/2_2_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                座間9遺体 別の女性証言で発覚
+                                                          </p>
+                            <p class="news__subtext">
+                                                                <span class="news__lastupdate">10/31 22:02</span>
+                                <span class="news__service-name">毎日新聞</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/3/6/16_6_r_20171101_1509486502958632/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_主要】" data-ga-action="ヤマト 数百社と契約終了" data-ga-label="4本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/filler/3_6_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                ヤマト 数百社と契約終了
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 06:39</span>
+                                <span class="news__service-name">朝日新聞社</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/1/1/16_2_r_20171101_1509493652248979/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_主要】" data-ga-action="つらいPMS「指の長さ」と関係?" data-ga-label="5本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/7257409ab457e7612892cdb5b9c084a4_1509496771_m.jpg),url(//portal.st-img.jp/filler/1_1_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                つらいPMS「指の長さ」と関係?
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 08:42</span>
+                                <span class="news__service-name">朝日新聞社</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/6/10/92_10_r_20171101_1509497262104249/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_主要】" data-ga-action="グリエル 観客が大ブーイング" data-ga-label="6本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/168d5a956f32021ba55492b5d31edf02_1509499391_m.jpg),url(//portal.st-img.jp/filler/6_10_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                グリエル 観客が大ブーイング
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 09:42</span>
+                                <span class="news__service-name">Full-Count</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/17_9_r_20171031_1509457132070232/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_主要】" data-ga-action="中居 病院で誰にも気付かれず" data-ga-label="7本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/c3b02e1266175c87e5b3646bd335f253_1509458811_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                中居 病院で誰にも気付かれず
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">10/31 22:36</span>
+                                <span class="news__service-name">デイリースポーツ</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/17_9_r_20171101_1509496572238989/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_主要】" data-ga-action="海老蔵8連休 麻央さんとの約束" data-ga-label="8本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/31b83f3b2bf1bd4eff4c5859cee52b54_1509497342_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                海老蔵8連休 麻央さんとの約束
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 09:33</span>
+                                <span class="news__service-name">デイリースポーツ</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+            <div class="news__item--ad" data-tab-id="1" data-tab-name="主要"></div>
+        </li>
+    </ul>
+    <div class="js-news__scroll-point" id="主要_1軍下"></div>
+    
+</section>
+
+
+
+                                                        
+                                                                <section class="js-article news__items--second">
+                                    
+                                    <div class="js-news__items-wrapper">
+                                    </div>
+
+                                    <script type="text/template" class="js-template-articles">
+                                        <%
+                                            // 主要の場合は省略タイトル
+                                            var title = view.isMainTab ? 'short_title' : 'title';
+                                        %>
+
+                                        <% collection.each(function(model, index) { %>
+                                            <% if (index % 9 === 0) { %>
+                                            <ul class="news__items">
+                                            <% } %>
+                                                <li class="news__item news__item--hidden">
+                                                    <a href="<%= model.get('url') %>"  class="js-analytics" data-ga-category="WebTop【News2軍_<%- view.tab.name %>】" data-ga-action="<%- model.get(title) %>" data-ga-label="<%- collection.fetchData.offset + index + 1 %>本目">
+                                                        <div class="news__thumbnail">
+                                                            <span style="background-image: url(<%= model.get('m_thumbnail') %>), url(<%= model.get('m_filler') %>);"></span>
+                                                        </div>
+                                                        <div class="news__text">
+                                                            <p class="news__body"><%- model.get(title) %></p>
+                                                            <p class="news__subtext">
+                                                                <span class="news__service-name"><%- model.get('credit') %></span>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            <% if (index % 9 === 8) { %>
+                                            </ul>
+                                            <div class="js-news__scroll-point news__item--hidden"></div>
+                                            <% } %>
+                                        <% }); %>
+                                    </script>
+
+                                    <script type="text/template" class="js-template-error">
+                                        <div class="js-error-fetch news__error">
+                                            読み込みに失敗しました。<br>
+                                            ページを再読み込みしてください。<br>
+                                            それでも解消されない場合は、<br>
+                                            しばらく時間をおいてから再度アクセスしてください。<br>
+                                            <a href="/">再読み込み</a>
+                                        </div>
+                                    </script>
+
+                                    <div class="js-news__loading news__loading"></div>
+                                    
+
+                                </section>
+                                
+                                                    </div>
+                    
+                                                                                                                        <div class="js-news__genre news__genre" style="display:none;">
+                                                            
+                                
+<section class="news__items--first">
+
+        <div class="news-crosshead">
+        <h2 class="news-crosshead__text--news" id="news_3_2">国内</h2>
+    </div>
+
+        
+        <ul class="news__items">
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/2/2/16_2_r_20171101_1509481031781071/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国内】" data-ga-action="座間遺体「会った日に殺した」" data-ga-label="1本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/92334e58c108705836003b7b63ae1a62_1509481031_m.jpg),url(//portal.st-img.jp/filler/2_2_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        座間遺体「会った日に殺した」
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">11/1 05:00</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/2/3/16_3_r_20171101_1509500021488314/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国内】" data-ga-action="「5年浪人」国会1番乗り議員" data-ga-label="2本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/d33d10b3f8427e92eb0088dc845a204a_1509500542_m.jpg),url(//portal.st-img.jp/filler/2_3_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        「5年浪人」国会1番乗り議員
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 10:25</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/2/3/16_3_r_20171101_1509499342100908/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国内】" data-ga-action="与党 特別国会会期末12月2週案" data-ga-label="3本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/2_3_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        与党 特別国会会期末12月2週案
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 10:17</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/2/3/10_3_r_20171101_1509487522529107/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国内】" data-ga-action="無資格検査 有識者会議設置へ" data-ga-label="4本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/2_3_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        無資格検査 有識者会議設置へ
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">11/1 07:03</span>
+                            <span class="news__service-name">産経新聞</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/2/2/14_2_r_20171101_1509492651576108/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国内】" data-ga-action="高3男子 小2女児にわいせつか" data-ga-label="5本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/2_2_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        高3男子 小2女児にわいせつか
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 08:27</span>
+                            <span class="news__service-name">産経新聞</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/2/2/16_2_r_20171101_1509494572316570/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国内】" data-ga-action="逃走車が木に激突し炎上 札幌" data-ga-label="6本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/2_2_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        逃走車が木に激突し炎上 札幌
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 08:56</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/2/4/16_4_r_20171031_1509457722113066/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国内】" data-ga-action="がん判別 血液数滴で「9割」に" data-ga-label="7本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/2_4_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        がん判別 血液数滴で「9割」に
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">10/31 22:39</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/2/2/16_2_r_20171101_1509496772099567/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国内】" data-ga-action="座間9人遺体 白石容疑者を送検" data-ga-label="8本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/80fb476e29d8619cdf3dca545ed3d9ac_1509498232_m.jpg),url(//portal.st-img.jp/filler/2_2_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        座間9人遺体 白石容疑者を送検
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 09:28</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <div class="news__item--ad" data-tab-id="3" data-category-id="2" data-tab-name="時事"></div>
+            </li>
+        </ul>
+        <div class="js-news__scroll-point" id="時事_国内"></div>
+        <div class="news-crosshead">
+        <h2 class="news-crosshead__text--news" id="news_3_3">経済・IT</h2>
+    </div>
+
+        
+        <ul class="news__items">
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/3/6/11_6_r_20171031_1509455462256012/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_経済・IT】" data-ga-action="日銀 物価上昇見通し引き下げ" data-ga-label="1本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/91c10d5af9b8bb0da7b283e00c814e90_1509455462_m.jpg),url(//portal.st-img.jp/filler/3_6_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        日銀 物価上昇見通し引き下げ
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">10/31 22:08</span>
+                            <span class="news__service-name">産経新聞</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/3/6/15_6_r_20171031_1509419331637977/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_経済・IT】" data-ga-action="神鋼 説明責任での「不手際」" data-ga-label="2本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/dba6caf7b27d0848d17f5207919ab890_1509419331_m.jpg),url(//portal.st-img.jp/filler/3_6_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        神鋼 説明責任での「不手際」
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">10/31 12:06</span>
+                            <span class="news__service-name">産経新聞</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/3/6/11_6_r_20171031_1509454861851714/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_経済・IT】" data-ga-action="授業料「出世払い」財務省難色" data-ga-label="3本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/db1134b3b1321c2a7340c7bd2e297adf_1509454861_m.jpg),url(//portal.st-img.jp/filler/3_6_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        授業料「出世払い」財務省難色
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">10/31 21:58</span>
+                            <span class="news__service-name">産経新聞</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/3/6/11_6_r_20171031_1509458482252209/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_経済・IT】" data-ga-action="日産が見直し完了 出荷再開へ" data-ga-label="4本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/c093f933fd369af77b68308e73182468_1509458482_m.jpg),url(//portal.st-img.jp/filler/3_6_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        日産が見直し完了 出荷再開へ
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">10/31 22:58</span>
+                            <span class="news__service-name">産経新聞</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/3/6/16_6_r_20171101_1509486502958632/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_経済・IT】" data-ga-action="ヤマト 数百社と契約終了" data-ga-label="5本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/3_6_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        ヤマト 数百社と契約終了
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">11/1 06:39</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/3/6/16_6_r_20171101_1509487152646246/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_経済・IT】" data-ga-action="12月電気・ガス 全社値下げへ" data-ga-label="6本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/3_6_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        12月電気・ガス 全社値下げへ
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">11/1 06:47</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/3/6/7_6_r_20171101_1509483774822921/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_経済・IT】" data-ga-action="「ABBA」の解散後ビジネスとは" data-ga-label="7本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/65c7c4b5516a94c21aef9e85fc2f7c4e_1509483774_m.jpg),url(//portal.st-img.jp/filler/3_6_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        「ABBA」の解散後ビジネスとは
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 06:00</span>
+                            <span class="news__service-name">東洋経済オンライン</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/3/6/16_6_r_20171101_1509491232051710/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_経済・IT】" data-ga-action="呼べば来る ヤマハ試作バイク" data-ga-label="8本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/041c45ee71adf2a37f81e7b7c7cd1c83_1509491232_m.jpg),url(//portal.st-img.jp/filler/3_6_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        呼べば来る ヤマハ試作バイク
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 08:01</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <div class="news__item--ad" data-tab-id="3" data-category-id="3" data-tab-name="時事"></div>
+            </li>
+        </ul>
+        <div class="js-news__scroll-point" id="時事_経済・IT"></div>
+        <div class="news-crosshead">
+        <h2 class="news-crosshead__text--news" id="news_3_4">国際</h2>
+    </div>
+
+        
+        <ul class="news__items">
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/4/8/109_8_r_20171031_1509417291998634/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国際】" data-ga-action="露介入疑惑 元顧問偽証認める" data-ga-label="1本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/b1d64c11266e701ed2150383649af26d_1509417291_m.jpg),url(//portal.st-img.jp/filler/4_8_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        露介入疑惑 元顧問偽証認める
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">10/31 11:27</span>
+                            <span class="news__service-name">CNN.co.jp</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/4/8/6_8_r_20171101_1509488463310052/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国際】" data-ga-action="車突入 大統領「病んだ人物」" data-ga-label="2本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/4_8_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        車突入 大統領「病んだ人物」
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 07:13</span>
+                            <span class="news__service-name">時事通信社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/4/8/109_8_r_20171101_1509490162193346/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国際】" data-ga-action="NYで8人死亡 市長「テロ行為」" data-ga-label="3本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/4_8_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        NYで8人死亡 市長「テロ行為」
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 07:38</span>
+                            <span class="news__service-name">CNN.co.jp</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/4/8/16_8_r_20171101_1509464901865566/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国際】" data-ga-action="前州首相 国外で独立運動へ" data-ga-label="4本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/4_8_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        前州首相 国外で独立運動へ
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">11/1 00:40</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/4/8/12_8_r_20171101_1509493912229038/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国際】" data-ga-action="米大統領 南北境界線視察せず" data-ga-label="5本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/4_8_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        米大統領 南北境界線視察せず
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">11/1 08:49</span>
+                            <span class="news__service-name">産経新聞</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/4/8/6_8_r_20171031_1509460861898724/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国際】" data-ga-action="子供の自爆テロか IS犯行主張" data-ga-label="6本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/4_8_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        子供の自爆テロか IS犯行主張
+                                                  </p>
+                        <p class="news__subtext">
+                                                            <span class="news__label--new">NEW</span>
+                                                        <span class="news__lastupdate">10/31 23:33</span>
+                            <span class="news__service-name">時事通信社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/4/8/16_8_r_20171031_1509447731994967/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国際】" data-ga-action="北追加実験で放射性物質漏出も" data-ga-label="7本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/filler/4_8_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        北追加実験で放射性物質漏出も
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">10/31 19:55</span>
+                            <span class="news__service-name">朝日新聞社</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <a href="https://article.auone.jp/detail/1/4/8/109_8_r_20171031_1509433482072767/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_時事_国際】" data-ga-action="K・スペイシー 主演ドラマ終了" data-ga-label="8本目">
+                    <div class="news__thumbnail">
+                        <span style="background-image: url(//portal.st-img.jp/thumb/7953eeedc1da9f9eea228be281f5b232_1509433482_m.jpg),url(//portal.st-img.jp/filler/4_8_m.jpg);"></span>
+                    </div>
+                    <div class="news__text">
+                        <p class="news__body">
+                                                        K・スペイシー 主演ドラマ終了
+                                                  </p>
+                        <p class="news__subtext">
+                                                        <span class="news__lastupdate">10/31 15:58</span>
+                            <span class="news__service-name">CNN.co.jp</span>
+                        </p>
+                    </div>
+                </a>
+            </li>
+                        <li class="news__item">
+                <div class="news__item--ad" data-tab-id="3" data-category-id="4" data-tab-name="時事"></div>
+            </li>
+        </ul>
+        <div class="js-news__scroll-point" id="時事_国際"></div>
+        
+</section>
+
+
+
+                                                        
+                                                    </div>
+                    
+                                                                    <div class="js-news__genre news__genre" style="display:none;">
+                                                            
+                                
+
+<section class="news__items--first">
+    
+    <ul class="news__items">
+                                    <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/17_9_r_20171101_1509496572238989/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_芸能】" data-ga-action="海老蔵8連休 麻央さんとの約束" data-ga-label="1本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/31b83f3b2bf1bd4eff4c5859cee52b54_1509497342_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                海老蔵8連休 麻央さんとの約束
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 09:33</span>
+                                <span class="news__service-name">デイリースポーツ</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/17_9_r_20171101_1509491912279884/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_芸能】" data-ga-action="爆笑問題 吉田アナ介抱の裏話" data-ga-label="2本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/47d6a6706f003d0d83dd1a126f4fa70c_1509495091_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                爆笑問題 吉田アナ介抱の裏話
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 08:16</span>
+                                <span class="news__service-name">デイリースポーツ</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/81_9_r_20171101_1509482961409892/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_芸能】" data-ga-action="まゆゆ卒業 戦友に見せた素顔" data-ga-label="3本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/247e657ff294d153e60986439bce50b8_1509499142_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                まゆゆ卒業 戦友に見せた素顔
+                                                          </p>
+                            <p class="news__subtext">
+                                                                <span class="news__lastupdate">11/1 05:42</span>
+                                <span class="news__service-name">モデルプレス</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/17_9_r_20171031_1509457132070232/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_芸能】" data-ga-action="中居 病院で誰にも気付かれず" data-ga-label="4本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/c3b02e1266175c87e5b3646bd335f253_1509458811_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                中居 病院で誰にも気付かれず
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">10/31 22:36</span>
+                                <span class="news__service-name">デイリースポーツ</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/89_8_r_20171101_1509493902393668/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_芸能】" data-ga-action="韓国人気俳優 死因究明されず" data-ga-label="5本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/9c0c54450dcdcf68aacfdd3bcd3d2270_1509495602_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                韓国人気俳優 死因究明されず
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 08:50</span>
+                                <span class="news__service-name">中央日報</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/17_9_r_20171101_1509499822192797/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_芸能】" data-ga-action="小倉 丸山議員の離党に疑問" data-ga-label="6本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/ac4ab7635956697a96480277a0837023_1509499912_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                小倉 丸山議員の離党に疑問
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 10:27</span>
+                                <span class="news__service-name">デイリースポーツ</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/2_9_r_20171101_1509488494886899/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_芸能】" data-ga-action="川栄 キャラ違う「姫」演技" data-ga-label="7本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/97079cafe733c6d87566d35f27811ecf_1509488494_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                川栄 キャラ違う「姫」演技
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 07:00</span>
+                                <span class="news__service-name">NEWSポストセブン</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/5/9/103_9_r_20171101_1509499672141534/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_芸能】" data-ga-action="哀川翔 プロレスデビュー" data-ga-label="8本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/63b52372db3d4289ed18fd751163a1db_1509499672_m.jpg),url(//portal.st-img.jp/filler/5_9_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                哀川翔 プロレスデビュー
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 10:23</span>
+                                <span class="news__service-name">東スポWeb</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+            <div class="news__item--ad" data-tab-id="4" data-tab-name="芸能"></div>
+        </li>
+    </ul>
+    <div class="js-news__scroll-point" id="芸能_1軍下"></div>
+    
+</section>
+
+
+
+                                                        
+                                                                <section class="js-article news__items--second">
+                                    
+                                    <div class="js-news__items-wrapper">
+                                    </div>
+
+                                    <script type="text/template" class="js-template-articles">
+                                        <%
+                                            // 主要の場合は省略タイトル
+                                            var title = view.isMainTab ? 'short_title' : 'title';
+                                        %>
+
+                                        <% collection.each(function(model, index) { %>
+                                            <% if (index % 9 === 0) { %>
+                                            <ul class="news__items">
+                                            <% } %>
+                                                <li class="news__item news__item--hidden">
+                                                    <a href="<%= model.get('url') %>"  class="js-analytics" data-ga-category="WebTop【News2軍_<%- view.tab.name %>】" data-ga-action="<%- model.get(title) %>" data-ga-label="<%- collection.fetchData.offset + index + 1 %>本目">
+                                                        <div class="news__thumbnail">
+                                                            <span style="background-image: url(<%= model.get('m_thumbnail') %>), url(<%= model.get('m_filler') %>);"></span>
+                                                        </div>
+                                                        <div class="news__text">
+                                                            <p class="news__body"><%- model.get(title) %></p>
+                                                            <p class="news__subtext">
+                                                                <span class="news__service-name"><%- model.get('credit') %></span>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            <% if (index % 9 === 8) { %>
+                                            </ul>
+                                            <div class="js-news__scroll-point news__item--hidden"></div>
+                                            <% } %>
+                                        <% }); %>
+                                    </script>
+
+                                    <script type="text/template" class="js-template-error">
+                                        <div class="js-error-fetch news__error">
+                                            読み込みに失敗しました。<br>
+                                            ページを再読み込みしてください。<br>
+                                            それでも解消されない場合は、<br>
+                                            しばらく時間をおいてから再度アクセスしてください。<br>
+                                            <a href="/">再読み込み</a>
+                                        </div>
+                                    </script>
+
+                                    <div class="js-news__loading news__loading"></div>
+                                    
+
+                                </section>
+                                
+                                                    </div>
+                    
+                                                                    <div class="js-news__genre news__genre" style="display:none;">
+                                                            
+                                
+
+<section class="news__items--first">
+    
+    <ul class="news__items">
+                                    <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/6/12/17_12_r_20171101_1509488912303183/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_スポーツ】" data-ga-action="ダル WS最終第7戦の先発決定" data-ga-label="1本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/60f9d959e3bcf8640b6393eec7848b56_1509492601_m.jpg),url(//portal.st-img.jp/filler/6_12_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                ダル WS最終第7戦の先発決定
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 07:26</span>
+                                <span class="news__service-name">デイリースポーツ</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/6/10/92_10_r_20171101_1509497262104249/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_スポーツ】" data-ga-action="グリエル 観客が大ブーイング" data-ga-label="2本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/168d5a956f32021ba55492b5d31edf02_1509499391_m.jpg),url(//portal.st-img.jp/filler/6_10_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                グリエル 観客が大ブーイング
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 09:42</span>
+                                <span class="news__service-name">Full-Count</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/6/10/8_10_r_20171101_1509490297410212/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_スポーツ】" data-ga-action="清宮開幕スタメン?監督が示唆" data-ga-label="3本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/f2d26e829b9e0f802431d803f1123796_1509490297_m.jpg),url(//portal.st-img.jp/filler/6_10_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                清宮開幕スタメン?監督が示唆
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 07:00</span>
+                                <span class="news__service-name">スポニチアネックス</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/6/10/17_10_r_20171101_1509484204708159/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_スポーツ】" data-ga-action="虎 SB構想外山田を獲得調査か" data-ga-label="4本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/587267de20620e4a0f998953933fda05_1509491371_m.jpg),url(//portal.st-img.jp/filler/6_10_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                虎 SB構想外山田を獲得調査か
+                                                          </p>
+                            <p class="news__subtext">
+                                                                <span class="news__lastupdate">11/1 06:06</span>
+                                <span class="news__service-name">デイリースポーツ</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/6/10/8_10_r_20171101_1509490293929936/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_スポーツ】" data-ga-action="悲壮感なく 筒香「勝つだけ」" data-ga-label="5本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/18e0f006268088aecd23d039e34f0fb7_1509497264_m.jpg),url(//portal.st-img.jp/filler/6_10_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                悲壮感なく 筒香「勝つだけ」
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 07:00</span>
+                                <span class="news__service-name">スポニチアネックス</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/6/12/2_12_r_20171101_1509488492402119/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_スポーツ】" data-ga-action="「松坂世代」崖っぷちの現状" data-ga-label="6本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/270f49d66b46ad15481cc55f8e36b9bc_1509492082_m.jpg),url(//portal.st-img.jp/filler/6_12_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                「松坂世代」崖っぷちの現状
+                                                          </p>
+                            <p class="news__subtext">
+                                                                <span class="news__lastupdate">11/1 07:00</span>
+                                <span class="news__service-name">NEWSポストセブン</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/6/11/17_11_r_20171101_1509480211856752/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_スポーツ】" data-ga-action="新時代?香川ら「ビッグ3」落選" data-ga-label="7本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/567e7778c9c19c5fab4bd7f48f9e77c0_1509491912_m.jpg),url(//portal.st-img.jp/filler/6_11_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                新時代?香川ら「ビッグ3」落選
+                                                          </p>
+                            <p class="news__subtext">
+                                                                <span class="news__lastupdate">11/1 05:01</span>
+                                <span class="news__service-name">デイリースポーツ</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/6/11/24_11_r_20171101_1509487661597642/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_スポーツ】" data-ga-action="バルサ 5年ぶりノーゴール" data-ga-label="8本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/f7c53d83c9f24247ecabf52b11cc44cb_1509487661_m.jpg),url(//portal.st-img.jp/filler/6_11_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                バルサ 5年ぶりノーゴール
+                                                          </p>
+                            <p class="news__subtext">
+                                                                <span class="news__lastupdate">11/1 07:03</span>
+                                <span class="news__service-name">サッカーキング</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+            <div class="news__item--ad" data-tab-id="5" data-tab-name="スポーツ"></div>
+        </li>
+    </ul>
+    <div class="js-news__scroll-point" id="スポーツ_1軍下"></div>
+    
+</section>
+
+
+
+                                                        
+                                                                <section class="js-article news__items--second">
+                                    
+                                    <div class="js-news__items-wrapper">
+                                    </div>
+
+                                    <script type="text/template" class="js-template-articles">
+                                        <%
+                                            // 主要の場合は省略タイトル
+                                            var title = view.isMainTab ? 'short_title' : 'title';
+                                        %>
+
+                                        <% collection.each(function(model, index) { %>
+                                            <% if (index % 9 === 0) { %>
+                                            <ul class="news__items">
+                                            <% } %>
+                                                <li class="news__item news__item--hidden">
+                                                    <a href="<%= model.get('url') %>"  class="js-analytics" data-ga-category="WebTop【News2軍_<%- view.tab.name %>】" data-ga-action="<%- model.get(title) %>" data-ga-label="<%- collection.fetchData.offset + index + 1 %>本目">
+                                                        <div class="news__thumbnail">
+                                                            <span style="background-image: url(<%= model.get('m_thumbnail') %>), url(<%= model.get('m_filler') %>);"></span>
+                                                        </div>
+                                                        <div class="news__text">
+                                                            <p class="news__body"><%- model.get(title) %></p>
+                                                            <p class="news__subtext">
+                                                                <span class="news__service-name"><%- model.get('credit') %></span>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            <% if (index % 9 === 8) { %>
+                                            </ul>
+                                            <div class="js-news__scroll-point news__item--hidden"></div>
+                                            <% } %>
+                                        <% }); %>
+                                    </script>
+
+                                    <script type="text/template" class="js-template-error">
+                                        <div class="js-error-fetch news__error">
+                                            読み込みに失敗しました。<br>
+                                            ページを再読み込みしてください。<br>
+                                            それでも解消されない場合は、<br>
+                                            しばらく時間をおいてから再度アクセスしてください。<br>
+                                            <a href="/">再読み込み</a>
+                                        </div>
+                                    </script>
+
+                                    <div class="js-news__loading news__loading"></div>
+                                    
+
+                                </section>
+                                
+                                                    </div>
+                    
+                                                                    <div class="js-news__genre news__genre" style="display:none;">
+                                                            
+                                
+
+<section class="news__items--first">
+    
+    <ul class="news__items">
+                                    <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/1/1/81_9_r_20171101_1509483851842991/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_コネタ】" data-ga-action="「電影少女」が初のドラマ化" data-ga-label="1本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/41fb292ed2f7502502e3cca4b21b15ef_1509483851_m.jpg),url(//portal.st-img.jp/filler/1_1_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                「電影少女」が初のドラマ化
+                                                          </p>
+                            <p class="news__subtext">
+                                                                <span class="news__lastupdate">11/1 06:00</span>
+                                <span class="news__service-name">モデルプレス</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/1/1/136_8_r_20171101_1509487224836868/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_コネタ】" data-ga-action="「小学校から全寮制」はアリか" data-ga-label="2本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/27e81137995d99ddb857f5847829f920_1509487224_m.jpg),url(//portal.st-img.jp/filler/1_1_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                「小学校から全寮制」はアリか
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 07:00</span>
+                                <span class="news__service-name">文春オンライン</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/1/1/7_6_r_20171101_1509490904314164/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_コネタ】" data-ga-action="「根性で出社」より大切なこと" data-ga-label="3本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/7ea110d314804c452ba6850cacc66d2f_1509490904_m.jpg),url(//portal.st-img.jp/filler/1_1_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                「根性で出社」より大切なこと
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 08:00</span>
+                                <span class="news__service-name">東洋経済オンライン</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/1/1/102_4_r_20171101_1509487812155133/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_コネタ】" data-ga-action="「理想の貧困像」への苦しみ" data-ga-label="4本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/574c08b39c971a33a389e04e5cbbdf38_1509487812_m.jpg),url(//portal.st-img.jp/filler/1_1_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                「理想の貧困像」への苦しみ
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 07:00</span>
+                                <span class="news__service-name">withnews</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/1/1/16_2_r_20171101_1509493652248979/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_コネタ】" data-ga-action="つらいPMS「指の長さ」と関係?" data-ga-label="5本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/7257409ab457e7612892cdb5b9c084a4_1509496771_m.jpg),url(//portal.st-img.jp/filler/1_1_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                つらいPMS「指の長さ」と関係?
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 08:42</span>
+                                <span class="news__service-name">朝日新聞社</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/1/1/114_6_r_20171101_1509495303202829/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_コネタ】" data-ga-action="同じ食事量で太る 原因は怒り?" data-ga-label="6本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/4a71c951ccfa1f9b2c351eb1fd4f8e31_1509495873_m.jpg),url(//portal.st-img.jp/filler/1_1_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                同じ食事量で太る 原因は怒り?
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 09:15</span>
+                                <span class="news__service-name">プレジデントオンライン</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/1/1/20_9_r_20171101_1509497982450080/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_コネタ】" data-ga-action="お年玉付年賀はがき 販売開始" data-ga-label="7本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/3960da669a155ee9022dd88760c689de_1509500983_m.jpg),url(//portal.st-img.jp/filler/1_1_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                お年玉付年賀はがき 販売開始
+                                                          </p>
+                            <p class="news__subtext">
+                                                                    <span class="news__label--new">NEW</span>
+                                                                <span class="news__lastupdate">11/1 09:56</span>
+                                <span class="news__service-name">ORICON NEWS</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+                    <a href="https://article.auone.jp/detail/1/1/1/27_1_r_20171031_1509449251974786/?ref=top" class="js-analytics" data-ga-category="WebTop【News1軍_コネタ】" data-ga-action="「集団心理」招く危険な結果" data-ga-label="8本目">
+                        <div class="news__thumbnail">
+                            <span style="background-image: url(//portal.st-img.jp/thumb/809c0ad58f82d2815de704402c1aa80b_1509449251_m.jpg),url(//portal.st-img.jp/filler/1_1_m.jpg);"></span>
+                        </div>
+                        <div class="news__text">
+                            <p class="news__body">
+                                                                「集団心理」招く危険な結果
+                                                          </p>
+                            <p class="news__subtext">
+                                                                <span class="news__lastupdate">10/31 20:15</span>
+                                <span class="news__service-name">All About(人気記事)</span>
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                            <li class="news__item">
+            <div class="news__item--ad" data-tab-id="6" data-tab-name="コネタ"></div>
+        </li>
+    </ul>
+    <div class="js-news__scroll-point" id="コネタ_1軍下"></div>
+    
+</section>
+
+
+                                                        
+                                                                <section class="js-article news__items--second">
+                                    
+                                    <div class="js-news__items-wrapper">
+                                    </div>
+
+                                    <script type="text/template" class="js-template-articles">
+                                        <%
+                                            // 主要の場合は省略タイトル
+                                            var title = view.isMainTab ? 'short_title' : 'title';
+                                        %>
+
+                                        <% collection.each(function(model, index) { %>
+                                            <% if (index % 9 === 0) { %>
+                                            <ul class="news__items">
+                                            <% } %>
+                                                <li class="news__item news__item--hidden">
+                                                    <a href="<%= model.get('url') %>"  class="js-analytics" data-ga-category="WebTop【News2軍_<%- view.tab.name %>】" data-ga-action="<%- model.get(title) %>" data-ga-label="<%- collection.fetchData.offset + index + 1 %>本目">
+                                                        <div class="news__thumbnail">
+                                                            <span style="background-image: url(<%= model.get('m_thumbnail') %>), url(<%= model.get('m_filler') %>);"></span>
+                                                        </div>
+                                                        <div class="news__text">
+                                                            <p class="news__body"><%- model.get(title) %></p>
+                                                            <p class="news__subtext">
+                                                                <span class="news__service-name"><%- model.get('credit') %></span>
+                                                            </p>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            <% if (index % 9 === 8) { %>
+                                            </ul>
+                                            <div class="js-news__scroll-point news__item--hidden"></div>
+                                            <% } %>
+                                        <% }); %>
+                                    </script>
+
+                                    <script type="text/template" class="js-template-error">
+                                        <div class="js-error-fetch news__error">
+                                            読み込みに失敗しました。<br>
+                                            ページを再読み込みしてください。<br>
+                                            それでも解消されない場合は、<br>
+                                            しばらく時間をおいてから再度アクセスしてください。<br>
+                                            <a href="/">再読み込み</a>
+                                        </div>
+                                    </script>
+
+                                    <div class="js-news__loading news__loading"></div>
+                                    
+
+                                </section>
+                                
+                                                    </div>
+                    
+                                        <script type="text/template" class="js-template-alt-ad">
+                        <% if (tabId === '1') { %><a href="https://camily.jp/?utm_source=auportalpc4&utm_medium=referral" target="_blank" class="news__alt-ad js-analytics" data-ga-action="社内訴求枠" data-ga-label="<%- tabName %>_camily"><img src="//kimg.auone.jp/emu/dist/img/banner/camily_main.jpg" alt=""></a><% } else  if (tabId === '3') { %><a href="https://camily.jp/?utm_source=auportalpc5&utm_medium=referral" target="_blank" class="news__alt-ad js-analytics" data-ga-action="社内訴求枠" data-ga-label="<%- tabName %>_camily"><img src="//kimg.auone.jp/emu/dist/img/banner/camily_news.jpg" alt=""></a><% } else if (tabId === '4') { %><a href="https://camily.jp/?utm_source=auportalpc1&utm_medium=referral" target="_blank" class="news__alt-ad js-analytics" data-ga-action="社内訴求枠" data-ga-label="<%- tabName %>_camily"><img src="//kimg.auone.jp/emu/dist/img/banner/camily_entame.jpg" alt=""></a><% } else if (tabId === '5') { %><a href="https://camily.jp/?utm_source=auportalpc3&utm_medium=referral" target="_blank" class="news__alt-ad js-analytics" data-ga-action="社内訴求枠" data-ga-label="<%- tabName %>_camily"><img src="//kimg.auone.jp/emu/dist/img/banner/camily_sports.jpg" alt=""></a><% } else if (tabId === '6') { %><a href="https://camily.jp/?utm_source=auportalpc2&utm_medium=referral" target="_blank" class="news__alt-ad js-analytics" data-ga-action="社内訴求枠" data-ga-label="<%- tabName %>_camily"><img src="//kimg.auone.jp/emu/dist/img/banner/camily_koneta.jpg" alt=""></a><% } %>
+
+                    </script>
+                </section>
+                
+
+            </article>
+            
+
+            
+            <div class="side__container">
+                <div class="side__ad-box js-side__ad-box">
+                </div>
+                
+                <nav class="sidemenu">
+
+                    
+                    <div class="sidemenu__personal js-sidemenu__personal">
+                        <dl>
+                            <dt class="sidemenu__title">ログイン</dt>
+                            
+                            <dd class="sidemenu__body">
+                                <ul>
+                                    <li class="sidemenu__login js-sidemenu__login">
+                                        <a href="https://integration.auone.jp/login/CMN2101E00.do?targeturl=https%3A%2F%2Fauone.jp" class="sidemenu__button js-analytics" data-ga-action="SideMenu" data-ga-label="au ID ログイン">au ID ログイン</a>
+                                        <script type="text/template" class="js-template-error">
+                                            <p class="sidemenu__error-text">ログイン状態の確認ができませんでした。</p>
+                                        </script>
+                                    </li>
+                                    <li>
+                                        <a href="https://id.auone.jp/id/pc/assigned/index.html" class="sidemenu__button js-analytics" data-ga-action="SideMenu" data-ga-label="au ID 登録">au ID 登録</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://id.auone.jp/index.html" class="sidemenu__button js-analytics" data-ga-action="SideMenu" data-ga-label="au ID会員情報_未ログイン">au ID会員情報</a>
+                                    </li>
+                                </ul>
+                            </dd>
+                            
+                        </dl>
+                        <script type="text/template" class="js-template">
+                            
+                            <dl>
+                                <dt class="sidemenu__title">ログイン</dt>
+                                
+                                <dd class="sidemenu__body">
+                                    <ul>
+                                        <li class="sidemenu__login">
+                                            <a href="https://id.auone.jp/index.html" class="sidemenu__button js-analytics" data-ga-action="SideMenu" data-ga-label="au ID ログイン中">au ID ログイン中</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://id.auone.jp/index.html" class="sidemenu__button js-analytics" data-ga-action="SideMenu" data-ga-label="au ID会員情報_ログイン済">au ID会員情報</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://integration.auone.jp/login/CMN2301E00.do" class="sidemenu__button js-analytics" data-ga-action="SideMenu" data-ga-label="ログアウト">ログアウト</a>
+                                        </li>
+                                    </ul>
+                                </dd>
+                                
+                            </dl>
+                            
+                        </script>
+                    </div>
+                    
+
+                    
+                    <div class="sidemenu__service">
+                        <dl>
+                            <dt class="sidemenu__title">メニュー</dt>
+                            
+                            <dd class="sidemenu__body">
+                                <ul>
+                                    <li class="sidemenu__category">
+                                        <a href="https://www.au.com/support/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="サポート">
+                                            <i class="sidemenu__sprite sidemenu__sprite--support"></i>
+                                            サポート
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu__category">
+                                        <a href="https://www.au.com/pr/star/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="au STAR">
+                                            <i class="sidemenu__sprite sidemenu__sprite--star"></i>
+                                            au STAR
+                                        </a>
+                                    </li>
+                                    <li class="sidemenu__category">
+                                        <a href="https://wallet.auone.jp/index.html?medid=passpc&amp;srcid=wallet&amp;serial=0006" class="js-analytics" data-ga-action="SideMenu" data-ga-label="au WALLET">
+                                            <i class="sidemenu__sprite sidemenu__sprite--wallet"></i>
+                                            au WALLET
+                                        </a>
+                                        <ul class="sidemenu__items">
+                                            <li class="sidemenu__item">
+                                                <a href="https://point.auone.jp/howtouse/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="ポイント使う">
+                                                    ポイント使う
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                            <a href="https://point.auone.jp/howtocharge/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="ポイント貯める">
+                                                ポイント貯める
+                                            </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://web.wm.auone.jp/lx/lp/sw/record15071602?trcd=AWPC1508252&amp;islgin=true&amp;bid=wm-cb-walletsite001" class="js-analytics" data-ga-action="SideMenu" data-ga-label="au WALLET Market">
+                                                    au WALLET Market
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidemenu__category">
+                                        <a href="https://pass.auone.jp/main/?aspref=gnavi_pass"  class="js-analytics" data-ga-action="SideMenu" data-ga-label="auスマートパス">
+                                            <i class="sidemenu__sprite sidemenu__sprite--pass"></i>
+                                            auスマートパス
+                                        </a>
+                                        <ul class="js-sidemenu__items sidemenu__items">
+                                            <li class="sidemenu__item">
+                                                <a href="https://pass.auone.jp/app/?aspref=auonetop_app" class="js-analytics" data-ga-action="SideMenu" data-ga-label="アプリ取り放題">
+                                                    アプリ取り放題
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://pass.auone.jp/web/?aspref=auonetop_web" class="js-analytics" data-ga-action="SideMenu" data-ga-label="Webアプリ">
+                                                    Webアプリ
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://tokuten.auone.jp/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="会員特典">
+                                                    会員特典
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://pass.auone.jp/anshin/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="あんしん">
+                                                    あんしん
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://pass.auone.jp/pass_member/?aspref=pctop" class="js-analytics" data-ga-action="SideMenu" data-ga-label="各種サービス入会・退会">
+                                                    各種サービス入会・退会
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidemenu__category">
+                                        <p>
+                                            <i class="sidemenu__sprite sidemenu__sprite--service"></i>
+                                            auサービス
+                                        </p>
+                                        <ul class="js-sidemenu__items sidemenu__items">
+                                            <li class="sidemenu__item">
+                                                <a href="http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_200225" class="js-analytics" data-ga-action="SideMenu" data-ga-label="ビデオパス">
+                                                    ビデオパス
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_72258" class="js-analytics" data-ga-action="SideMenu" data-ga-label="うたパス">
+                                                    うたパス
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://ac.ebis.ne.jp/tr_set.php?argument=WSwgvzTd&amp;ai=k01_72300" class="js-analytics" data-ga-action="SideMenu" data-ga-label="ブックパス">
+                                                    ブックパス
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://disneypass.jp/auone/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="ディズニーパス">
+                                                    ディズニーパス
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://game.auone.jp/?rf=sidemenu" class="js-analytics" data-ga-action="SideMenu" data-ga-label="ゲーム">
+                                                    ゲーム
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.au.com/electricity/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="auでんき">
+                                                    auでんき
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://ac.ebis.ne.jp/tr_set.php?argument=3FYeHBQU&amp;ai=j_0000275" class="js-analytics" data-ga-action="SideMenu" data-ga-label="auのほけん・ローン">
+                                                    auのほけん・ローン
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://www.jibunbank.co.jp/common/redirector.html?id=15&amp;code=KD2CMD080701" class="js-analytics" data-ga-action="SideMenu" data-ga-label="じぶん銀行">
+                                                    じぶん銀行
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://eznavi.auone.jp/map/AuOneMapTop.act" class="js-analytics" data-ga-action="SideMenu" data-ga-label="地図">
+                                                    地図
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://weather.auone.jp/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="天気">
+                                                    天気
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://fortune.auone.jp/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="占い">
+                                                    占い
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://eznavi.auone.jp/transfer/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="乗換">
+                                                    乗換
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://musicstore.auone.jp/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="LISMO Store">
+                                                    LISMO Store
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://au-sports.auone.jp/top" class="js-analytics" data-ga-action="SideMenu" data-ga-label="au Smart Sports">
+                                                    au Smart Sports
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://www.facebook.com/campaign/landing.php?campaign_id=160940300637036&amp;keyword=kddiweb01" class="js-analytics" data-ga-action="SideMenu" data-ga-label="Facebook">
+                                                    Facebook
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://wowma.jp/?aff_id=prt0005" class="js-analytics" data-ga-action="SideMenu" data-ga-label="Wowma!">
+                                                    Wowma!
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://www.mbok.jp/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="モバオク">
+                                                    モバオク
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://auonlineshop.kddi.com/top/CSfTop.jsp?bid=ols-ols-990005" class="js-analytics" data-ga-action="SideMenu" data-ga-label="au Online Shop">
+                                                    au Online Shop
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://big.toto.auone.jp/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="au toto">
+                                                    au toto
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://www.webmoney.jp/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="WebMoney">
+                                                    WebMoney
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.anshinnavi.auone.jp/lwp/view/index.html" class="js-analytics" data-ga-action="SideMenu" data-ga-label="安心ナビ">
+                                                    安心ナビ
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://address.auone.jp/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="auアドレス帳">
+                                                    auアドレス帳
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidemenu__category">
+                                        <a href="https://www.au.com/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="auホームページ">
+                                            <i class="sidemenu__sprite sidemenu__sprite--auhome"></i>
+                                            auホームページ
+                                        </a>
+                                        <ul class="js-sidemenu__items sidemenu__items">
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.au.com/mobile/service/mail/webmail/login/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="WEBメール">
+                                                    WEBメール（@ezweb.ne.jp）
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://csqa.kddi.com/#open_tab1" class="js-analytics" data-ga-action="SideMenu" data-ga-label="auQ&Aプラス">
+                                                    auQ&amp;Aプラス
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://cs-ez2.au.kddi.com/auShopOut/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="auショップ検索">
+                                                    auショップ検索
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.au.com/information/notice_internet/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="障害・メンテナンス情報">
+                                                    障害・メンテナンス情報
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidemenu__category">
+                                        <a href="https://www.au.com/internet/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="au one net">
+                                            <i class="sidemenu__sprite sidemenu__sprite--auonenet"></i>
+                                            au one net
+                                        </a>
+                                        <ul class="js-sidemenu__items sidemenu__items">
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.au.com/internet/charge/smartvalue/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="スマートフォン/ケータイをお持ちの方へ">
+                                                    スマートフォン/ケータイをお持ちの方へ
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.au.com/internet/auonenet/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="サービス内容">
+                                                    サービス内容
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.au.com/internet/auonenet/option/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="オプションサービス">
+                                                    オプションサービス
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.au.com/support/service/internet/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="会員サポート">
+                                                    会員サポート
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://mail.auone-net.jp/trinity/login.do" class="js-analytics" data-ga-action="SideMenu" data-ga-label="au one net WEBメール">
+                                                    au one net WEBメール
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.au.com/internet/auonenet/option/security/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="インターネットセキュリティ">
+                                                    インターネットセキュリティ
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://www.au.com/internet/application/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="新規お申し込み">
+                                                    新規お申し込み
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidemenu__category">
+                                        <p>
+                                            <i class="sidemenu__sprite sidemenu__sprite--config"></i>
+                                            各種設定・その他
+                                        </p>
+                                        <ul class="js-sidemenu__items sidemenu__items">
+                                            <li class="sidemenu__item">
+                                                <a href="/setting/services/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="個人設定">
+                                                    個人設定
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://article.auone.jp/help/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="ヘルプ">
+                                                    ヘルプ
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://pass.auone.jp/inquiry/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="お問い合わせ">
+                                                    お問い合わせ
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://article.auone.jp/terms-of-use/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="利用規約">
+                                                    利用規約
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://www.kddi.com/corporate/kddi/public/privacy/" class="js-analytics" data-ga-action="SideMenu" data-ga-label="プライバシーポリシー">
+                                                    プライバシーポリシー
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="http://www.mediba.jp/privacy/sp/advertising.html" class="js-analytics" data-ga-action="SideMenu" data-ga-label="広告について">
+                                                    広告について
+                                                </a>
+                                            </li>
+                                            <li class="sidemenu__item">
+                                                <a href="https://id.auone.jp/index.html" class="js-analytics" data-ga-action="SideMenu" data-ga-label="au ID">
+                                                    au ID
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </dd>
+                            
+                        </dl>
+                    </div>
+                    
+
+                </nav>
+                
+            </div>
+            
+        </div>
+        
+
+        
+        <footer class="footer">
+            <div class="footer__copyright">
+                <small>©KDDI/©mediba</small>
+            </div>
+        </footer>
+        
+
+    </div>
+    
+
+<script>
+    window.global = {
+        apiUrl: 'https://auone.jp/sapi/',
+        cdnUrl: '//kimg.auone.jp',
+        search: {"url":{"portal_web":"http:\/\/search.auone.jp","portal_map":"https:\/\/eznavi.auone.jp"},"area":{"searchWindow":{"client":"kddi-auone","sr":{"portal_web":"0101"}},"suggest":{"client":"kddi-auone","sr":"0212"}}},
+        cookieList: {"DTKT":{"domain":".auone.jp","path":"\/","expire":1510710926},"VTKT":{"domain":".auone.jp","path":"\/","expire":1510710926},"ANMWPF":{"domain":".auone.jp","path":"\/","expire":1824861326},"ANMW":{"domain":".auone.jp","path":"\/","expire":1824861326},"ANFT":{"domain":".auone.jp","path":"\/","expire":1824861326},"ANMWPF_PC":{"domain":".auone.jp","path":"\/","expire":1824861326},"ANMW_PC":{"domain":".auone.jp","path":"\/","expire":1824861326},"ANFT_PC":{"domain":".auone.jp","path":"\/","expire":1824861326},"LTTFPF1":{"domain":"","path":"\/","expire":1824861326},"LTTFLN1":{"domain":"","path":"\/","expire":1824861326},"LTTFPF2":{"domain":"","path":"\/","expire":1824861326},"LTTFLN2":{"domain":"","path":"\/","expire":1824861326},"LTTFPF3":{"domain":"","path":"\/","expire":1824861326},"LTTFLN3":{"domain":"","path":"\/","expire":1824861326},"HSFL":{"domain":".auone.jp","path":"\/","expire":1824861326},"SGFL":{"domain":".auone.jp","path":"\/","expire":1824861326},"ISBU":{"domain":".auone.jp","path":"\/","expire":1541037326},"pcbc":{"domain":".auone.jp","path":"\/","expire":1824861326},"MNS_u":{"domain":".auone.jp","path":"\/","expire":1824861326},"TIDA_AUTH":[],"CCAATLT":{"domain":".auone.jp","path":"\/","expire":1509502226,"secure":true},"LTFNWP":{"domain":"","path":"\/","expire":1824861326,"secure":true},"P_FOLLOW_KEYLIST":{"domain":".auone.jp","path":"\/","expire":1824861326,"secure":true},"ozid":{"domain":".auone.jp","path":"\/","expire":1824861326}},
+        millisecond: 1509501326648,
+        cacheBlock: 4,
+        theme: "pc",
+    };
+</script>
+
+<script src="//simg.auone.jp/emu/dist/js/top_pc.js?cc=1508835726"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+  var so_src = ('https:' == document.location.protocol ? 'https://ssl.socdm.com' : 'http://tg.socdm.com') + '/so.js?' + 'siteid=9441';
+  var so_script = '<scr'+'ipt type="text/javascript" src="'+so_src+'"></scr'+'ipt>';
+  document.write(so_script);
+})();
+//]]>
+</script>
+
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MP7TC7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MP7TC7');</script>
+
+
+<script type="text/javascript" src="//kimg.auone.jp/pc/js/adobe_s_code_au.js"></script>
+
+
+</body>
+</html>
