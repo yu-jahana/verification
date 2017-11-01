@@ -1,15 +1,40 @@
-importScripts('https://yu-jahana.github.io/verification/assets/sp/js/workbox-sw.prod.v2.1.0.mjs');
+var cacheName = 'weather';
+var filesToCache = [
+  '/index.html',
+  'https://yu-jahana.github.io/verification/assets/img/icon/l/101.png',
+  'https://yu-jahana.github.io/verification/assets/sp/css/top_main.min.css'
+];
+console.log('gg');
+self.addEventListener('install', function(e) {
+    console.log('[ServiceWorker] Install');
+    e.waitUntil(
+        caches.open(cacheName).then(function(cache) {
+            console.log('[ServiceWorker] Caching app shell');
+            return cache.addAll(filesToCache);
+        })
+    );
+});
 
-const workboxSW = new WorkboxSW();
-workboxSW.precache([
-  {
-    url: '/index.html',
-    revision: 'bb121c',
-  }, {
-    url: 'https://yu-jahana.github.io/verification/assets/img/icon/l/101.png',
-    revision: 'acd123',
-  }, {
-    url: 'https://yu-jahana.github.io/verification/assets/sp/css/top_main.min.css',
-    revision: 'a32caa',
-  }
-]);
+self.addEventListener('activate', function(e) {
+  console.log('[ServiceWorker] Activate');
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log('[ServiceWorker] Removing old cache', key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+  return self.clients.claim();
+});
+
+self.addEventListener('fetch', function(e) {
+  console.log('[ServiceWorker] Fetch', e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
+});
