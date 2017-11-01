@@ -1,4 +1,4 @@
-importScripts('https://yu-jahana.github.io/verification/assets/js/workbox-sw.prod.v2.1.0.mjs');
+importScripts('https://yu-jahana.github.io/verification/assets/sp/js/workbox-sw.prod.v2.1.0.mjs');
 
 const workboxSW = new WorkboxSW();
 workboxSW.precache([
