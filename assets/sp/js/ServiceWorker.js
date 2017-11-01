@@ -32,6 +32,7 @@ self.addEventListener('activate', function(e) {
 });
 */
 
+/*
 self.addEventListener('fetch', function(e) {
   console.log('[ServiceWorker] Fetch', e.request.url);
   e.respondWith(
@@ -40,3 +41,4 @@ self.addEventListener('fetch', function(e) {
     })
   );
 });
+*/
