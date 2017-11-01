@@ -4,7 +4,7 @@ var filesToCache = [
   'https://yu-jahana.github.io/verification/assets/img/icon/l/101.png',
   'https://yu-jahana.github.io/verification/assets/sp/css/top_main.min.css'
 ];
-
+console.log('gg');
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Install');
     e.waitUntil(
