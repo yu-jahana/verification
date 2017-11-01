@@ -3,7 +3,7 @@ var filesToCache = [
   '/',
   '/index.html'
 ];
-
+console.log('fff')
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
   e.waitUntil(
@@ -14,7 +14,6 @@ self.addEventListener('install', function(e) {
   );
 });
 
-/*
 self.addEventListener('activate', function(e) {
   console.log('[ServiceWorker] Activate');
   e.waitUntil(
@@ -29,4 +28,3 @@ self.addEventListener('activate', function(e) {
   );
   return self.clients.claim();
 });
-*/
