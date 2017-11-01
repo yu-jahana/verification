@@ -1,5 +1,8 @@
-var cacheName = 'weatherPWA-step-6-1';
-var filesToCache = [];
+var cacheName = 'weather-jahana';
+var filesToCache = [
+  '/',
+  '/index.html'
+];
 
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');
